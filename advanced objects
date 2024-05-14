@@ -1,0 +1,25 @@
+/* var bellBoy1 = {
+    name: 'timmy',
+    age:19.,
+    hasWorkPermit: true,
+    languages: ['french', 'english']
+}
+
+var houseKeeper1 = {
+    name: 'gabriela',
+    age: 20,
+    experience: ['cleaning', 'cooking'],
+    periodOfWork: 'night period' 
+} */ 
+
+function HouseKeeper(name, age, experience, periodOfWork) { //'constructor' function needs to be capitalized
+    this.name = name;
+    this.age = age;
+    this.experience = experience;
+    this.periodOfWork = periodOfWork;
+}
+
+var houseKeeper1 = new HouseKeeper('gabriela', 18, ["cleaning", "cooking"], 'night period');
+
+
+console.log(houseKeeper1);
