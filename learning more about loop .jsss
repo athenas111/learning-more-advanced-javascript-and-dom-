@@ -1,0 +1,10 @@
+/*portuguese notes cuz its easier for me to understand*/ 
+let numberOfDrumButtons =  document.querySelectorAll('.drum').length;
+for (/*começa com*/ var i = 0 ; /*para quando i nao for mais < let*/ i < numberOfDrumButtons; i++ /* i++ é incrementado a cada vez que o loop é acionado*/ ) {
+    document.querySelectorAll('.drum')[i].addEventListener("click", function () {
+    alert('I got clicked')
+});
+}
+
+
+ 
