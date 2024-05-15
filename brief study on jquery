@@ -1,0 +1,46 @@
+ 
+// $('h1').css('color', 'white'); selecting the element and styling it 
+// $("h1.title") selecting the class of h1
+// $('button'); selects all buttons in a easier way 
+// $('h1').addClass('big-title margin-50'); add more than one style of css to a element 
+$('h1').text('athena') //changing the text 
+$('button').html('<em>zodiac</em>') //changing innerHTML 
+$('img').attr('src') //attributes 
+$('a').attr('href', 'https://www.yahoo.com') // changing the attribute 
+
+// now adding event listener 
+$('h1').click(function() {
+    $('h1').css('color', 'grey')
+})
+
+//adding event listener to more than one element without using vanilla loop  
+/* with: 
+    for {var i=0; i<5;} {
+    document.querySelectorAll('button')[i].addEventListener('click', function{
+        document.querySelector('h1').style.color='purple'
+    });
+} */
+// without:
+$('button').click(function() {
+    $('h1').css('color', 'purple')
+})
+// to see wich key was pressed in a input 
+
+$('input').keydown(function(event){
+     console.log(event);
+})
+
+//adding keydown to the whole document 
+$(document).keydown(function(event){
+    console.log(event.key);
+})
+
+// to change text everytime to the key pressed
+$(document).keydown(function(event){
+ $('h1').text(event.key)
+})
+
+// another way to add event listeners
+$(document).on('mouseover', function() {
+    $('h1').css('color', 'purple')
+})
